@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { ExercisesIndex } from "./ExercisesIndex";
 import { ExercisesShow } from "./ExercisesShow";
+import { Login } from "./Login";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 
@@ -33,6 +34,7 @@ export function Home() {
 
   return (
     <div>
+      <Login />
       <Signup />
       <ExercisesIndex exercises={exercises} onSelectExercise={handleShowExercise} />
       <Modal show={isExercisesShowVisible} onClose={handleHideExercise}>
