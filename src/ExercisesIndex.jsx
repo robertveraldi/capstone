@@ -10,6 +10,7 @@ export function ExercisesIndex(props) {
           <img src={exercise.image_url} />
           <p>{exercise.video_url}</p>
           <button onClick={() => props.onSelectExercise(exercise)}>More Info</button>
+          <button>Add To Routine</button>
         </div>
       ))}
     </div>
