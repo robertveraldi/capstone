@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ExercisesIndex } from "./ExercisesIndex";
 import { ExercisesShow } from "./ExercisesShow";
 import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 
@@ -35,6 +36,7 @@ export function Home() {
   return (
     <div>
       <Login />
+      <LogoutLink />
       <Signup />
       <ExercisesIndex exercises={exercises} onSelectExercise={handleShowExercise} />
       <Modal show={isExercisesShowVisible} onClose={handleHideExercise}>
