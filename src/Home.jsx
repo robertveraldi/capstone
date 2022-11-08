@@ -6,6 +6,7 @@ import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import { Modal } from "./Modal";
 import { RoutinesIndex } from "./RoutinesIndex";
+import { RoutinesNew } from "./RoutinesNew";
 import { Signup } from "./Signup";
 
 export function Home() {
@@ -51,6 +52,14 @@ export function Home() {
 
   useEffect(handleIndexRoutines, []);
 
+  const handleCreateRoutine = (params, successCallback) => {
+    console.log("handleCreateRoutine", params);
+    axios.post("http://localhost:3000/routines.json", params).then((response) => {
+      setRoutines([...routines, response.data]);
+      successCallback();
+    });
+  };
+
   return (
     <div>
       <Login />
@@ -61,6 +70,7 @@ export function Home() {
         <ExercisesShow exercise={currentExercise} />
       </Modal>
       <RoutinesIndex routines={routines} />
+      <RoutinesNew onCreateRoutine={handleCreateRoutine} />
     </div>
   );
 }
