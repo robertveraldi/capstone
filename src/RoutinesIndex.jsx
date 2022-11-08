@@ -5,9 +5,11 @@ export function RoutinesIndex(props) {
       <h1>Your Routine</h1>
       {props.routines.map((routine) => (
         <div key={routine.id}>
-          {/* <h2>{routine.exercise.name}</h2>
-          <p>{routine.exercise.description}</p> */}
-          <p>{routine.reps}</p>
+          <h2>Exercise Name: {routine.exercise_name}</h2>
+          <p>Description: {routine.exercise_description}</p>
+          <p>Reps: {routine.reps}</p>
+          <img src={routine.exercise_image} />
+          <p>{routine.exercise_video}</p>
         </div>
       ))}
     </div>
