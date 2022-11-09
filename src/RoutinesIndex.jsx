@@ -1,5 +1,4 @@
 export function RoutinesIndex(props) {
-  console.log(props.routines, "im also here");
   return (
     <div id="routines-index">
       <h1>Your Routine</h1>
@@ -10,6 +9,14 @@ export function RoutinesIndex(props) {
           <p>Reps: {routine.reps}</p>
           <img src={routine.exercise_image} />
           <p>{routine.exercise_video}</p>
+          {/* add a button here to remove (destroy) an exercise from a routine if it's already added, need to re-render routine without page refresh */}
+          <button
+            onClick={() => {
+              props.onDestroyRoutine(routine);
+            }}
+          >
+            Remove Exercise From Routine
+          </button>
         </div>
       ))}
     </div>
