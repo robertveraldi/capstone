@@ -14,6 +14,7 @@ export function Header() {
   return (
     <header>
       <nav>
+        <h1>Gym Routine App</h1>
         <Link to="/">Home</Link> |{" "}
         {localStorage.jwt === undefined ? (
           <>
