@@ -69,9 +69,6 @@ export function Home() {
 
   return (
     <div>
-      <Login />
-      <LogoutLink />
-      <Signup />
       <ExercisesIndex exercises={exercises} onSelectExercise={handleShowExercise} />
       <Modal show={isExercisesShowVisible} onClose={handleHideExercise}>
         <ExercisesShow exercise={currentExercise} />
