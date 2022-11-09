@@ -14,7 +14,6 @@ export function ExercisesIndex(props) {
           <a href={exercise.video_url}>Video</a>
           {/* <Player playsInline src={exercise.video_url} /> */}
           <button onClick={() => props.onSelectExercise(exercise)}>More Info</button>
-          <button>Add To Routine</button>
         </div>
       ))}
     </div>
