@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   // const [isSingupVisible, setIsSignupVisible] = useState(false);
@@ -21,7 +22,8 @@ export function Header() {
             <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
           </>
         ) : (
-          <Link to="/logout">Logout</Link>
+          // <Link to="/logout">Logout</Link>
+          <LogoutLink />
         )}
         {/* this doesnt need to be a new page, just have the link work */}
       </nav>
