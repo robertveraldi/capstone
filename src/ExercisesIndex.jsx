@@ -1,5 +1,3 @@
-import { Player } from "video-react";
-
 export function ExercisesIndex(props) {
   console.log(props.exercises, "im here");
   return (
@@ -10,6 +8,8 @@ export function ExercisesIndex(props) {
           <h2>{exercise.name}</h2>
           <p>{exercise.description}</p>
           <img src={exercise.image_url} />
+          <br></br>
+          {/* this ^ tag is to have the stuff below align left */}
           {/* <p>{exercise.video_url}</p> */}
           <a href={exercise.video_url}>Video</a>
           {/* <Player playsInline src={exercise.video_url} /> */}
