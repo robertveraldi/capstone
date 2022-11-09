@@ -11,7 +11,9 @@ export function Home() {
   }
 
   const [exercises, setExercises] = useState([]);
+
   const [isExercisesShowVisible, setisExercisesShowVisible] = useState(false);
+
   const [currentExercise, setCurrentExercise] = useState({});
 
   const handleIndexExercises = () => {
