@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login } from "./Login";
 import { Signup } from "./Signup";
 import { LogoutLink } from "./LogoutLink";
+import { RoutinesIndex } from "./RoutinesIndex";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/your_routine" element={<RoutinesIndex />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="logout" element={<LogoutLink />} />

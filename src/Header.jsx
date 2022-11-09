@@ -23,7 +23,9 @@ export function Header() {
           </>
         ) : (
           // <Link to="/logout">Logout</Link>
-          <LogoutLink />
+          <>
+            <Link to="/your_routine">Your Routine</Link> | <LogoutLink />
+          </>
         )}
         {/* this doesnt need to be a new page, just have the link work */}
       </nav>

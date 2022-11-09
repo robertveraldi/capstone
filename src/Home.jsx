@@ -42,28 +42,11 @@ export function Home() {
     setisExercisesShowVisible(false);
   };
 
-  const handleIndexRoutines = () => {
-    console.log("handleIndexRoutines");
-    axios.get("http://localhost:3000/routines.json").then((response) => {
-      console.log(response.data);
-      setRoutines(response.data);
-    });
-  };
-
-  useEffect(handleIndexRoutines, []);
-
   const handleCreateRoutine = (params, successCallback) => {
     console.log("handleCreateRoutine", params);
     axios.post("http://localhost:3000/routines.json", params).then((response) => {
       setRoutines([...routines, response.data]);
       successCallback();
-    });
-  };
-
-  const handleDestroyRoutine = (routine) => {
-    console.log("handleDestroyRoutine", routine);
-    axios.delete(`http://localhost:3000/routines/${routine.id}.json`).then((response) => {
-      setRoutines(routines.filter((r) => r.id !== routine.id));
     });
   };
 
@@ -73,7 +56,7 @@ export function Home() {
       <Modal show={isExercisesShowVisible} onClose={handleHideExercise}>
         <ExercisesShow exercise={currentExercise} />
       </Modal>
-      <RoutinesIndex routines={routines} onDestroyRoutine={handleDestroyRoutine} />
+      {/* <RoutinesIndex routines={routines} onDestroyRoutine={handleDestroyRoutine} /> */}
       <RoutinesNew onCreateRoutine={handleCreateRoutine} />
     </div>
   );
