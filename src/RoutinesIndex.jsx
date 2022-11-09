@@ -21,6 +21,14 @@ export function RoutinesIndex() {
     });
   };
 
+  const handleCreateRoutine = (params, successCallback) => {
+    console.log("handleCreateRoutine", params);
+    axios.post("http://localhost:3000/routines.json", params).then((response) => {
+      setRoutines([...routines, response.data]);
+      successCallback();
+    });
+  };
+
   return (
     <div id="routines-index">
       <h1>Your Routine</h1>
@@ -30,8 +38,9 @@ export function RoutinesIndex() {
           <p>Description: {routine.exercise_description}</p>
           <p>Reps: {routine.reps}</p>
           <img src={routine.exercise_image} />
-          <p>{routine.exercise_video}</p>
-          {/* add a button here to remove (destroy) an exercise from a routine if it's already added, need to re-render routine without page refresh */}
+          <br></br>
+          <a href={routine.exercise_video}>Video</a>
+          {/*destroy button needs to re-render routine without page refresh */}
           <button
             onClick={() => {
               handleDestroyRoutine(routine);
