@@ -6,6 +6,7 @@ import { Login } from "./Login";
 import { Signup } from "./Signup";
 import { LogoutLink } from "./LogoutLink";
 import { RoutinesIndex } from "./RoutinesIndex";
+import { RoutinesNew } from "./RoutinesNew";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/your_routine" element={<RoutinesIndex />} />
+        <Route path="add_exercise" element={<RoutinesNew />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="logout" element={<LogoutLink />} />
