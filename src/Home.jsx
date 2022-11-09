@@ -2,12 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { ExercisesIndex } from "./ExercisesIndex";
 import { ExercisesShow } from "./ExercisesShow";
-import { Login } from "./Login";
-import { LogoutLink } from "./LogoutLink";
 import { Modal } from "./Modal";
-import { RoutinesIndex } from "./RoutinesIndex";
-import { RoutinesNew } from "./RoutinesNew";
-import { Signup } from "./Signup";
 
 export function Home() {
   const jwt = localStorage.getItem("jwt");
@@ -18,8 +13,6 @@ export function Home() {
   const [exercises, setExercises] = useState([]);
   const [isExercisesShowVisible, setisExercisesShowVisible] = useState(false);
   const [currentExercise, setCurrentExercise] = useState({});
-
-  const [routines, setRoutines] = useState([]);
 
   const handleIndexExercises = () => {
     console.log("handleIndexExercises");
@@ -42,22 +35,13 @@ export function Home() {
     setisExercisesShowVisible(false);
   };
 
-  const handleCreateRoutine = (params, successCallback) => {
-    console.log("handleCreateRoutine", params);
-    axios.post("http://localhost:3000/routines.json", params).then((response) => {
-      setRoutines([...routines, response.data]);
-      successCallback();
-    });
-  };
-
   return (
     <div>
       <ExercisesIndex exercises={exercises} onSelectExercise={handleShowExercise} />
       <Modal show={isExercisesShowVisible} onClose={handleHideExercise}>
         <ExercisesShow exercise={currentExercise} />
       </Modal>
-      {/* <RoutinesIndex routines={routines} onDestroyRoutine={handleDestroyRoutine} /> */}
-      <RoutinesNew onCreateRoutine={handleCreateRoutine} />
+      {/* <RoutinesNew onCreateRoutine={handleCreateRoutine} /> */}
     </div>
   );
 }
