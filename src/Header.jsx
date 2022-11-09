@@ -24,7 +24,8 @@ export function Header() {
         ) : (
           // <Link to="/logout">Logout</Link>
           <>
-            <Link to="/your_routine">Your Routine</Link> | <LogoutLink />
+            <Link to="/your_routine">Your Routine</Link> | <Link to="/add_exercise">Add to Your Routine</Link> |{" "}
+            <LogoutLink />
           </>
         )}
         {/* this doesnt need to be a new page, just have the link work */}
