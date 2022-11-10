@@ -43,7 +43,6 @@ export function Home() {
       <Modal show={isExercisesShowVisible} onClose={handleHideExercise}>
         <ExercisesShow exercise={currentExercise} />
       </Modal>
-      {/* <RoutinesNew onCreateRoutine={handleCreateRoutine} /> */}
     </div>
   );
 }
