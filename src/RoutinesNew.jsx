@@ -12,9 +12,12 @@ export function RoutinesNew(props) {
     });
   };
 
+  const [value, setValue] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
+    params.append("exercise_id", value.id);
     handleCreateRoutine(params, () => event.target.reset());
     // for (const pair of params.entries()) {
     //   console.log(`${pair[0]}, ${pair[1]}`);
@@ -27,11 +30,12 @@ export function RoutinesNew(props) {
     console.log("handleExercisesDropdown");
     axios.get("http://localhost:3000/exercises").then((response) => {
       console.log(response.data);
-      setExercisesDropdown(
-        response.data.map((exercise) => {
-          return exercise.name;
-        })
-      );
+      // setExercisesDropdown(
+      //   response.data.map((exercise) => {
+      //     return [exercise.name, exercise.id];
+      //   })
+      // );
+      setExercisesDropdown(response.data);
     });
   };
 
@@ -42,19 +46,33 @@ export function RoutinesNew(props) {
       <h1>Add to Your Routine</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          Exercise: <DropdownList defaultValue="Exercises" data={exercisesDropdown} />
+          Exercise:{" "}
+          <DropdownList
+            defaultValue="Exercises"
+            data={exercisesDropdown}
+            dataKey="id"
+            textField="name"
+            value={value}
+            onChange={setValue}
+          />
         </div>
+        <div>
+          Reps: <input name="reps" type="number" />
+        </div>
+        <button type="submit">Add to Routine</button>
       </form>
     </div>
   );
 }
 
-// <form onSubmit={handleSubmit}>
-// <div>
-//   Exercise ID: <input name="exercise_id" type="number" />
-// </div>
-// <div>
-//   Reps: <input name="reps" type="number" />
-// </div>
-// <button type="submit">Add to Routine</button>
-// </form>
+{
+  /* <form type="hidden" onSubmit={handleSubmit}>
+<div>
+  Exercise ID: <input name="exercise_id" type="number" />
+</div>
+<div>
+  Reps: <input name="reps" type="number" />
+</div>
+<button type="submit">Add to Routine</button>
+</form> */
+}
