@@ -1,4 +1,8 @@
 import axios from "axios";
+import "react-widgets/styles.css";
+import DropdownList from "react-widgets/DropdownList";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export function RoutinesNew(props) {
   const handleCreateRoutine = (params, successCallback) => {
@@ -16,39 +20,41 @@ export function RoutinesNew(props) {
     //   console.log(`${pair[0]}, ${pair[1]}`);
     // }
   };
-  console.log(props.onCreateRoutine);
+
+  const [exercisesDropdown, setExercisesDropdown] = useState([]);
+
+  const handleExercisesDropdown = () => {
+    console.log("handleExercisesDropdown");
+    axios.get("http://localhost:3000/exercises").then((response) => {
+      console.log(response.data);
+      setExercisesDropdown(
+        response.data.map((exercise) => {
+          return exercise.name;
+        })
+      );
+    });
+  };
+
+  useEffect(handleExercisesDropdown, []);
 
   return (
     <div>
       <h1>Add to Your Routine</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          Exercise ID: <input name="exercise_id" type="number" />
+          Exercise: <DropdownList defaultValue="Exercises" data={exercisesDropdown} />
         </div>
-        <div>
-          Reps: <input name="reps" type="number" />
-        </div>
-        <button type="submit">Add to Routine</button>
       </form>
     </div>
   );
 }
-// this form needs to have a dropdown with exercise names, box for reps input
 
-// properties of a select element
-
-{
-  /* {exercises.map((exercise) => (
-        <div key={exercise}>
-          <p>{exercise.name}</p>
-        </div> */
-}
-{
-  /* ))} */
-}
-
-// <label for="exer">Exercises: </label>
-// <select name="exercises" id="exer">
-//   <option value="select">Select Exercise</option>
-//   <option value="Barbell Bench Press">Barbell Bench Press</option>
-// </select>
+// <form onSubmit={handleSubmit}>
+// <div>
+//   Exercise ID: <input name="exercise_id" type="number" />
+// </div>
+// <div>
+//   Reps: <input name="reps" type="number" />
+// </div>
+// <button type="submit">Add to Routine</button>
+// </form>
