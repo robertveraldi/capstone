@@ -38,7 +38,7 @@ export function Home() {
   };
 
   return (
-    <div>
+    <div className="container">
       <ExercisesIndex exercises={exercises} onSelectExercise={handleShowExercise} />
       <Modal show={isExercisesShowVisible} onClose={handleHideExercise}>
         <ExercisesShow exercise={currentExercise} />
