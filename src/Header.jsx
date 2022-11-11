@@ -37,10 +37,10 @@ export function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="nav justify-content-center">
+          <ul className="nav">
             <li className="nav-item">
               <Link className="nav-link active" to="/">
-                Home
+                Exercises
               </Link>
             </li>
             {localStorage.jwt === undefined ? (
