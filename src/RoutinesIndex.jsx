@@ -35,7 +35,7 @@ export function RoutinesIndex() {
                 <h5 className="card-title">Exercise Name: {routine.exercise_name}</h5>
                 <p className="card-text">Description: {routine.exercise_description}</p>
                 <p className="card-text">Reps: {routine.reps}</p>
-                <a class="btn btn-primary" href={routine.exercise_video} role="button">
+                <a class="btn btn-primary" href={routine.exercise_video} target="_blank" role="button">
                   Video
                 </a>
                 {/*destroy button needs to re-render routine without page refresh */}
