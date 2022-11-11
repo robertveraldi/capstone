@@ -26,24 +26,32 @@ export function RoutinesIndex() {
   return (
     <div id="routines-index">
       <h1>Your Routine</h1>
-      {routines.map((routine) => (
-        <div key={routine.id}>
-          <h2>Exercise Name: {routine.exercise_name}</h2>
-          <p>Description: {routine.exercise_description}</p>
-          <p>Reps: {routine.reps}</p>
-          <img src={routine.exercise_image} />
-          <br></br>
-          <a href={routine.exercise_video}>Video</a>
-          {/*destroy button needs to re-render routine without page refresh */}
-          <button
-            onClick={() => {
-              handleDestroyRoutine(routine);
-            }}
-          >
-            Remove Exercise From Routine
-          </button>
-        </div>
-      ))}
+      <div className="row">
+        {routines.map((routine) => (
+          <div className="col">
+            <div className="card routine" style={{ width: "18rem" }} key={routine.id}>
+              <img src={routine.exercise_image} className="card-img-top" alt={routine.name} />
+              <div className="card-body">
+                <h5 className="card-title">Exercise Name: {routine.exercise_name}</h5>
+                <p className="card-text">Description: {routine.exercise_description}</p>
+                <p className="card-text">Reps: {routine.reps}</p>
+                <a class="btn btn-primary" href={routine.exercise_video} role="button">
+                  Video
+                </a>
+                {/*destroy button needs to re-render routine without page refresh */}
+                <button
+                  className="btn btn-primary"
+                  onClick={() => {
+                    handleDestroyRoutine(routine);
+                  }}
+                >
+                  Remove Exercise From Routine
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
