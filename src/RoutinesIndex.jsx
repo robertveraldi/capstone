@@ -23,14 +23,6 @@ export function RoutinesIndex() {
 
   // useEffect(handleDestroyRoutine, []); to re render after deleting?
 
-  const handleCreateRoutine = (params, successCallback) => {
-    console.log("handleCreateRoutine", params);
-    axios.post("http://localhost:3000/routines.json", params).then((response) => {
-      setRoutines([...routines, response.data]);
-      successCallback();
-    });
-  };
-
   return (
     <div id="routines-index">
       <h1>Your Routine</h1>
