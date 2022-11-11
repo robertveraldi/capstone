@@ -45,8 +45,10 @@ export function RoutinesNew(props) {
     <div>
       <h1>Add to Your Routine</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          Exercise:{" "}
+        <div className="mb-3">
+          <label for="exampleExercise" className="form-label">
+            Exercise:{" "}
+          </label>
           <DropdownList
             defaultValue="Exercises"
             data={exercisesDropdown}
@@ -56,10 +58,15 @@ export function RoutinesNew(props) {
             onChange={setValue}
           />
         </div>
-        <div>
-          Reps: <input name="reps" type="number" />
+        <div className="mb-3">
+          <label for="exampleReps" className="form-label">
+            Reps:{" "}
+          </label>
+          <input name="reps" type="number" className="form-control" />
         </div>
-        <button type="submit">Add to Routine</button>
+        <button type="submit" className="btn btn-primary">
+          Add to Routine
+        </button>
       </form>
     </div>
   );
