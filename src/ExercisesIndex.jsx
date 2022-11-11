@@ -12,7 +12,7 @@ export function ExercisesIndex(props) {
                 <h5 className="card-title">{exercise.name}</h5>
                 <p className="card-text">Description: {exercise.description}</p>
                 {/* <p>{exercise.video_url}</p> */}
-                <a class="btn btn-primary" href={exercise.video_url} role="button">
+                <a class="btn btn-primary" href={exercise.video_url} target="_blank" role="button">
                   Video
                 </a>
                 &nbsp;
