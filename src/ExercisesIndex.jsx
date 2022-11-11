@@ -3,19 +3,27 @@ export function ExercisesIndex(props) {
   return (
     <div id="exercises-index">
       <h1>All Exercises</h1>
-      {props.exercises.map((exercise) => (
-        <div key={exercise.id}>
-          <h2>{exercise.name}</h2>
-          <p>{exercise.description}</p>
-          <img src={exercise.image_url} />
-          <br></br>
-          {/* this ^ tag is to have the stuff below align left */}
-          {/* <p>{exercise.video_url}</p> */}
-          <a href={exercise.video_url}>Video</a>
-          {/* <Player playsInline src={exercise.video_url} /> */}
-          <button onClick={() => props.onSelectExercise(exercise)}>More Info</button>
-        </div>
-      ))}
+      <div className="row">
+        {props.exercises.map((exercise) => (
+          <div className="col">
+            <div className="card exercise" style={{ width: "18rem" }} key={exercise.id}>
+              <img src={exercise.image_url} className="card-img-top" alt={exercise.name} />
+              <div className="card-body">
+                <h5 className="card-title">{exercise.name}</h5>
+                <p className="card-text">Description: {exercise.description}</p>
+                {/* <p>{exercise.video_url}</p> */}
+                <a class="btn btn-primary" href={exercise.video_url} role="button">
+                  Video
+                </a>
+                &nbsp;
+                <button className="btn btn-primary" onClick={() => props.onSelectExercise(exercise)}>
+                  More Info
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
