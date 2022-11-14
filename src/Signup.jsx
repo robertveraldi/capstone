@@ -30,19 +30,60 @@ export function Signup() {
         ))}
       </ul>
       <form onSubmit={handleSubmit}>
-        <div>
-          Name: <input name="name" type="text" />
+        <div className="mb-3">
+          <label for="signupName" className="form-label">
+            Name
+          </label>
+          <div className="form-outline w-25">
+            <input name="name" type="text" className="form-control" id="signupName" placeholder="John Doe" />
+          </div>
         </div>
-        <div>
-          Email: <input name="email" type="email" />
+        <div className="mb-3">
+          <label for="signupEmail" className="form-label">
+            Email Address
+          </label>
+          <div className="form-outline w-25">
+            <input
+              name="email"
+              type="email"
+              className="form-control"
+              id="signupEmail"
+              placeholder="email@example.com"
+              aria-describedby="email-help"
+            />
+          </div>
+          <div id="emailHelp" className="form-text">
+            We'll never share your email with anyone else.
+          </div>
         </div>
-        <div>
-          Password: <input name="password" type="password" />
+        <label for="signupPassword" className="form-label">
+          Password
+        </label>
+        <div className="form-outline w-25">
+          <input
+            name="password"
+            type="password"
+            className="form-control"
+            id="signupPassword"
+            placeholder="Enter Password"
+          />
         </div>
-        <div>
-          Password confirmation: <input name="password_confirmation" type="password" />
+        <label for="signupPasswordConfirm" className="form-label">
+          Password
+        </label>
+        <div className="form-outline w-25">
+          <input
+            name="password_confirmation"
+            type="password"
+            className="form-control"
+            id="signupPasswordConfirm"
+            placeholder="Enter Password Again"
+          />
         </div>
-        <button type="submit">Signup</button>
+        <br></br>
+        <button type="submit" className="btn btn-primary">
+          Signup
+        </button>
       </form>
     </div>
   );
