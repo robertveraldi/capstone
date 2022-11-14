@@ -43,37 +43,53 @@ export function RoutinesNew(props) {
 
   return (
     <div>
-      <h1>Add to Your Routine</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label for="exampleExercise" className="form-label">
-            Exercise:{" "}
-          </label>
-          <DropdownList
-            defaultValue="Exercises"
-            data={exercisesDropdown}
-            dataKey="id"
-            textField="name"
-            value={value}
-            onChange={setValue}
-          />
+      <h1 className="text-center">Add to Your Routine</h1>
+      <div className="container h-100">
+        <div className="row h-100 justify-content-center align-items-center">
+          <div className="col-10 col-md-8 col-lg-6">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label for="exampleExercise" className="form-label">
+                  Exercise
+                </label>
+                <div className="form-outline w-100">
+                  <DropdownList
+                    placeholder="Exercises"
+                    // defaultValue="Exercises"
+                    data={exercisesDropdown}
+                    dataKey="id"
+                    textField="name"
+                    value={value}
+                    onChange={setValue}
+                  />
+                </div>
+              </div>
+              <div className="mb-3">
+                <label for="exampleReps" className="form-label">
+                  Reps
+                </label>
+                <div className="form-outline w-100">
+                  <input
+                    name="reps"
+                    type="number"
+                    className="form-control"
+                    id="ecampleReps"
+                    placeholder="Enter a Number"
+                  />
+                </div>
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Add to Routine
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="mb-3">
-          <label for="exampleReps" className="form-label">
-            Reps:{" "}
-          </label>
-          <input name="reps" type="number" className="form-control" />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Add to Routine
-        </button>
-      </form>
+      </div>
     </div>
   );
 }
 
-{
-  /* <form type="hidden" onSubmit={handleSubmit}>
+/* <form type="hidden" onSubmit={handleSubmit}>
 <div>
   Exercise ID: <input name="exercise_id" type="number" />
 </div>
@@ -82,4 +98,14 @@ export function RoutinesNew(props) {
 </div>
 <button type="submit">Add to Routine</button>
 </form> */
-}
+
+/* <Combobox
+busy={loading}
+placeholder="Exercises"
+data={exercisesDropdown}
+dataKey="id"
+textField="name"
+value={value}
+onChange={setValue}
+hideEmptyPopup
+/> */
