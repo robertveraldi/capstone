@@ -25,20 +25,23 @@ export function RoutinesIndex() {
 
   return (
     <div id="routines-index">
-      <h1>Your Routine</h1>
-      <div className="row">
+      <h1 className="text-center">Your Routine</h1>
+      <div className="row row-cols-1 row-cols-md-3 g-4">
         {routines.map((routine) => (
           <div className="col">
-            <div className="card routine" style={{ width: "18rem" }} key={routine.id}>
-              <img src={routine.exercise_image} className="card-img-top" alt={routine.name} />
+            <div className="card h-100" key={routine.id}>
               <div className="card-body">
-                <h5 className="card-title">Exercise Name: {routine.exercise_name}</h5>
-                <p className="card-text">Description: {routine.exercise_description}</p>
+                <h5 className="card-title text-center">{routine.exercise_name}</h5>
+                <p className="card-text">{routine.exercise_description}</p>
                 <p className="card-text">Reps: {routine.reps}</p>
-                <a class="btn btn-primary" href={routine.exercise_video} target="_blank" role="button">
+                <img src={routine.exercise_image} className="card-img-bottom" alt={routine.name} />
+              </div>
+              <div className="card-footer text-center">
+                <a className="btn btn-primary" href={routine.exercise_video} target="_blank" role="button">
                   Video
                 </a>
                 {/*destroy button needs to re-render routine without page refresh */}
+                &nbsp;
                 <button
                   className="btn btn-primary"
                   onClick={() => {
@@ -55,3 +58,5 @@ export function RoutinesIndex() {
     </div>
   );
 }
+
+// line 32 after className style={{ width: "18rem" }}
