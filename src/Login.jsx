@@ -30,39 +30,51 @@ export function Login() {
 
   return (
     <div id="login">
-      <h1>Login</h1>
+      <h1 className="text-center">Login</h1>
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>
         ))}
       </ul>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label for="inputEmail" className="form-label">
-            Email Address
-          </label>
-          <div className="form-outline w-25">
-            <input name="email" type="email" className="form-control" id="inputEmail" placeholder="email@example.com" />
+      <div className="container h-100">
+        <div className="row h-100 justify-content-center align-items-center">
+          <div className="col-10 col-md-8 col-lg-6">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label for="inputEmail" className="form-label">
+                  Email Address
+                </label>
+                <div className="form-outline w-100">
+                  <input
+                    name="email"
+                    type="email"
+                    className="form-control"
+                    id="inputEmail"
+                    placeholder="email@example.com"
+                  />
+                </div>
+              </div>
+              <div className="mb-3">
+                <label for="inputPassword" className="form-label">
+                  Password
+                </label>
+                <div className="form-outline w-100">
+                  <input
+                    name="password"
+                    type="password"
+                    className="form-control"
+                    id="inputPassword"
+                    placeholder="Enter Password"
+                  />
+                </div>
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Login
+              </button>
+            </form>
           </div>
         </div>
-        <div className="mb-3">
-          <label for="inputPassword" className="form-label">
-            Password
-          </label>
-          <div className="form-outline w-25">
-            <input
-              name="password"
-              type="password"
-              className="form-control"
-              id="inputPassword"
-              placeholder="Enter Password"
-            />
-          </div>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Login
-        </button>
-      </form>
+      </div>
     </div>
   );
 }
