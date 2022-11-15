@@ -10,11 +10,19 @@ export function Modal(props) {
               <h5 className="modal-title">Title</h5>
             </div> */}
             <div className="modal-body">{props.children}</div>
-            {console.log(props.children, "children")}
+            {console.log(props.children.props.exercise.video_url, "children")}
             <div className="modal-footer">
-              <button type="button" className="btn btn-primary">
+              {/* <button type="button" className="btn btn-primary">
                 Video
-              </button>
+              </button> */}
+              <a
+                className="btn btn-primary"
+                href={props.children.props.exercise.video_url}
+                target="_blank"
+                role="button"
+              >
+                Video
+              </a>
               &nbsp;
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={props.onClose}>
                 Close
