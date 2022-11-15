@@ -32,7 +32,7 @@ export function RoutinesIndex() {
             <div className="card h-100" key={routine.id}>
               <div className="card-body">
                 <h5 className="card-title text-center">{routine.exercise_name}</h5>
-                <p className="card-text">{routine.exercise_description}</p>
+                <p className="card-text line-clamp">{routine.exercise_description}</p>
                 <p className="card-text">Reps: {routine.reps}</p>
                 <img src={routine.exercise_image} className="card-img-bottom" alt={routine.name} />
               </div>

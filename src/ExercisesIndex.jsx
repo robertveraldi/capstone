@@ -1,5 +1,6 @@
 export function ExercisesIndex(props) {
   console.log(props.exercises, "im here");
+
   return (
     <div id="exercises-index">
       <h1 className="text-center">All Exercises</h1>
@@ -11,7 +12,7 @@ export function ExercisesIndex(props) {
               {/* <img className="card-img-top" src={exercise.image_url} alt={exercise.name} /> */}
               <div className="card-body text-center">
                 <h5 className="card-title">{exercise.name}</h5>
-                <p className="card-text">{exercise.description}</p>
+                <p className="card-text line-clamp">{exercise.description}</p>
                 <img className="card-img-bottom" src={exercise.image_url} alt={exercise.name} />
               </div>
               <div className="card-footer text-center">
