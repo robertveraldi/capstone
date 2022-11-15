@@ -59,17 +59,19 @@ export function Signup() {
                   We'll never share your email with anyone else.
                 </div>
               </div>
-              <label for="signupPassword" className="form-label">
-                Password
-              </label>
-              <div className="form-outline w-100">
-                <input
-                  name="password"
-                  type="password"
-                  className="form-control"
-                  id="signupPassword"
-                  placeholder="Enter Password"
-                />
+              <div className="mb-3">
+                <label for="signupPassword" className="form-label">
+                  Password
+                </label>
+                <div className="form-outline w-100">
+                  <input
+                    name="password"
+                    type="password"
+                    className="form-control"
+                    id="signupPassword"
+                    placeholder="Enter Password"
+                  />
+                </div>
               </div>
               <label for="signupPasswordConfirm" className="form-label">
                 Password Confirmation
