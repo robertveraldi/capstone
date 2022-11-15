@@ -7,9 +7,7 @@ export function ExercisesIndex(props) {
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {props.exercises.map((exercise) => (
           <div className="col">
-            {/* <div className="card w-100"> */}
             <div className="card h-100" key={exercise.id}>
-              {/* <img className="card-img-top" src={exercise.image_url} alt={exercise.name} /> */}
               <div className="card-body text-center">
                 <h5 className="card-title">{exercise.name}</h5>
                 <p className="card-text line-clamp">{exercise.description}</p>
@@ -31,7 +29,6 @@ export function ExercisesIndex(props) {
               </div>
             </div>
           </div>
-          // </div>
         ))}
       </div>
     </div>
