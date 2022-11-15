@@ -6,9 +6,6 @@ export function ExercisesShow(props) {
       <div className="image-container">
         <img className="modal-img" src={props.exercise.image_url} />
       </div>
-      <a className="btn btn-primary" href={props.exercise.video_url} target="_blank" role="button">
-        Video
-      </a>
     </div>
   );
 }
