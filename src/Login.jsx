@@ -41,7 +41,6 @@ export function Login() {
           <div className="col-10 col-md-8 col-lg-6">
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label className="form-label mt-4">Enter Your Information</label>
                 <div className="form-floating mb-3 form-outline w-100">
                   <input
                     name="email"
@@ -52,11 +51,6 @@ export function Login() {
                   />
                   <label for="floatingInput">Email Address</label>
                 </div>
-                {/* </div> */}
-                {/* <div className="mb-3">
-                  <label for="inputPassword" className="form-label">
-                    Password
-                  </label> */}
                 <div className="form-floating mb-3 form-outline w-100">
                   <input
                     name="password"
