@@ -40,37 +40,38 @@ export function Login() {
         <div className="row h-100 justify-content-center align-items-center">
           <div className="col-10 col-md-8 col-lg-6">
             <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label for="inputEmail" className="form-label">
-                  Email Address
-                </label>
-                <div className="form-outline w-100">
+              <div className="form-group">
+                <label className="form-label mt-4">Enter Your Information</label>
+                <div className="form-floating mb-3 form-outline w-100">
                   <input
                     name="email"
                     type="email"
                     className="form-control"
-                    id="inputEmail"
-                    placeholder="email@example.com"
+                    id="floatingInput"
+                    placeholder="name@example.com"
                   />
+                  <label for="floatingInput">Email Address</label>
                 </div>
-              </div>
-              <div className="mb-3">
-                <label for="inputPassword" className="form-label">
-                  Password
-                </label>
-                <div className="form-outline w-100">
+                {/* </div> */}
+                {/* <div className="mb-3">
+                  <label for="inputPassword" className="form-label">
+                    Password
+                  </label> */}
+                <div className="form-floating mb-3 form-outline w-100">
                   <input
                     name="password"
                     type="password"
                     className="form-control"
-                    id="inputPassword"
-                    placeholder="Enter Password"
+                    id="floatingPassword"
+                    placeholder="Password"
                   />
+                  <label for="floatingPassword">Password</label>
                 </div>
+
+                <button type="submit" className="btn btn-primary">
+                  Login
+                </button>
               </div>
-              <button type="submit" className="btn btn-primary">
-                Login
-              </button>
             </form>
           </div>
         </div>
