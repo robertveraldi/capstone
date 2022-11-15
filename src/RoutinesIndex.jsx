@@ -24,7 +24,7 @@ export function RoutinesIndex() {
   // useEffect(handleDestroyRoutine, []); to re render after deleting?
 
   return (
-    <div id="routines-index">
+    <div id="routines-index" className="container">
       <h1 className="text-center">Your Routine</h1>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {routines.map((routine) => (
