@@ -72,7 +72,7 @@ export function Signup() {
                 />
               </div>
               <label for="signupPasswordConfirm" className="form-label">
-                Password
+                Password Confirmation
               </label>
               <div className="form-outline w-100">
                 <input
