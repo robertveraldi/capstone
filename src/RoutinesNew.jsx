@@ -55,7 +55,6 @@ export function RoutinesNew(props) {
                 <div className="form-outline w-100">
                   <DropdownList
                     placeholder="Exercises"
-                    // defaultValue="Exercises"
                     data={exercisesDropdown}
                     dataKey="id"
                     textField="name"
@@ -68,14 +67,15 @@ export function RoutinesNew(props) {
                 <label for="exampleReps" className="form-label">
                   Reps
                 </label>
-                <div className="form-outline w-100">
+                <div className="form-floating form-outline w-100">
                   <input
                     name="reps"
                     type="number"
                     className="form-control"
-                    id="ecampleReps"
-                    placeholder="Enter a Number"
+                    id="floatingReps"
+                    placeholder="Enter A Number"
                   />
+                  <label for="floatingReps">Enter A Number</label>
                 </div>
               </div>
               <button type="submit" className="btn btn-primary">
