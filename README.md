@@ -9,15 +9,17 @@
 
 ## Introduction
 
-This react project serves as the front end for this app. It communicates with my RoR back end, and is designed for a simple, user-friendly experience. This app allows the end user to browse and learn about different exercises. After creating an account, the user can then build a routine including whichever exercises they'd like. It's a great tool to take the uncertainity out of going to the gym, particularly for those who are just starting their fitness journey. I struggled with starting to work out because I was never sure of a plan for once I was actually in the gym. I've built this with my experience in mind.
+This react project serves as the front end for my app. It communicates with my [RoR back end](https://github.com/robertveraldi/capstone-rails-backend)), and is designed for a simple, user-friendly experience. This app allows the end user to browse and learn about different exercises. After creating an account, the user can then build a routine including whichever exercises they'd like. It's a great tool to take the uncertainity out of going to the gym, particularly for those who are just starting their fitness journey. I struggled with starting to work out because I was never sure of a plan for once I was actually in the gym. I've built this with my experience in mind.
 
 <!-- Describe the technologies you used to build your app (Ruby on Rails backend, React.js frontend, any libraries, APIs, etc.) -->
 
-This is built using React.js version 8.19.2. It utilizes useState and useEffect, Axios for web requests, Bootstrap with an imported 'Bootswatch' theme (Litera), a DropdownList techonolgy from 'React Widgets', and React-Router for multipage linking. I also added custom CSS for things such as modals and card-text.
+This is built using React.js version 8.19.2. It utilizes useState and useEffect, Axios for web requests, Bootstrap with an imported 'Bootswatch' theme (Litera), a DropdownList techonolgy from the React Widgets Library, and React-Router. I also added custom CSS for things such as modals and card-text.
 
 <!-- Optional: Add screenshots or gifs of your application -->
 
 ### Installation
+
+Clone this repo down to your computer. It will create a directory on its own, but if you'd prefer it to be within a certain directory, make sure to navigate there first. Then run -
 
 ```bash
 npm install
