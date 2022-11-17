@@ -1,10 +1,10 @@
 # Gym Routine (React.js)
 
 <p align="center">
-<a href="#introduction">Introduction</a> &nbsp;
-<a href = "#installation">Installation</a> &nbsp;
-<a href = "#usage">Usage</a> &nbsp;
-<a href = "#roadmap">Roadmap</a> &nbsp;
+<a href="#introduction">Introduction</a> &nbsp;&bull;&nbsp;
+<a href = "#installation">Installation</a> &nbsp;&bull;&nbsp;
+<a href = "#usage">Usage</a> &nbsp;&bull;&nbsp;
+<a href = "#roadmap">Roadmap</a> &nbsp;&bull;&nbsp;
 </p>
 
 ## Introduction
