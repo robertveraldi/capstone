@@ -25,7 +25,7 @@ Clone this repo down to your computer. It will create a directory on its own, bu
 npm install
 ```
 
-This command will download and install a package and it's dependencies from the `package.json` file. It generates a `node_modules` folder with the installed modules.
+This command will download and install all dependencies from the `package.json` file. It generates a `node_modules` folder with the installed modules.
 
 ### Usage
 
