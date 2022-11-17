@@ -4,7 +4,7 @@
 <a href="#introduction">Introduction</a> &nbsp;&bull;&nbsp;
 <a href = "#installation">Installation</a> &nbsp;&bull;&nbsp;
 <a href = "#usage">Usage</a> &nbsp;&bull;&nbsp;
-<a href = "#roadmap">Roadmap</a> &nbsp;&bull;&nbsp;
+<a href = "#roadmap">Roadmap</a>
 </p>
 
 ## Introduction
