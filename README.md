@@ -19,7 +19,7 @@ This is built using React.js version 8.19.2. It utilizes useState and useEffect,
 
 ### Installation
 
-Clone this repo down to your computer. It will create a directory on its own, but if you'd prefer it to be within a certain directory, make sure to navigate there first. Then run -
+Clone this repo down to your computer. It will create a directory on its own, but if you'd prefer it to be within a certain directory, make sure to navigate there first. Then, cd into the directory and run -
 
 ```bash
 npm install
